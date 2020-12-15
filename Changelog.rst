@@ -1,5 +1,26 @@
 Changelog
 =========
+3.9.X (X XXX 2020)
++++++++++++++++++++++++
+
+Resolved issues
+---------------
+* Fixed potential memory leak when initializing block ciphers.
+* GH#469: RSA objects have now method ``public_key()`` like ECC objects.
+  The old method ``publickey()`` is still available for backward compatibility.
+* GH#476: ``Crypto.Util.Padding.unpad()`` was raising the incorrect exception
+  in case of zero-length inputs. Thanks to Captainowie.
+
+3.9.9 (2 November 2020)
++++++++++++++++++++++++
+
+Resolved issues
+---------------
+* GH#435: Fixed ``Crypto.Util.number.size`` for negative numbers.
+
+New features
+------------
+* Build Python 3.9 wheels on Windows.
 
 3.9.8 (23 June 2020)
 ++++++++++++++++++++
